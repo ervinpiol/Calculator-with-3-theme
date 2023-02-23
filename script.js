@@ -25,7 +25,7 @@ toggleButton.addEventListener("click", () => {
   }
 });
 let hasResult = false;
-function gg() {
+function resultListener() {
   const currentNumber = Number(current.dataset.value);
   const previousNumber = Number(previous.dataset.value);
 
@@ -65,7 +65,7 @@ const equalButton = document.querySelector("#equal");
 const operator = document.querySelector("#operator");
 
 equalButton.addEventListener("click", () => {
-  gg();
+  resultListener();
 });
 
 resetButton.addEventListener("click", () => {
@@ -105,7 +105,7 @@ operatorButtons.forEach((operatorButton) => {
     if (current.innerText === "") {
       return;
     } else {
-      gg();
+      resultListener();
     }
     operator.textContent = operatorValue;
     operator.textContent = "";
