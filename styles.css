@@ -19,6 +19,7 @@
   --numberColor: hsl(221, 14%, 31%);
   --textColor: hsl(0, 0%, 100%);
   --topColor: hsl(0, 0%, 100%);
+  --equalColor: #fff;
 }
 
 .second_theme {
@@ -41,6 +42,7 @@
   --numberColor: hsl(60, 10%, 19%);
   --textColor: hsl(0, 0%, 100%);
   --topColor: hsl(60, 10%, 19%);
+  --equalColor: #fff;
 }
 .third_theme {
   /* #### Backgrounds */
@@ -62,6 +64,7 @@
   --numberColor: hsl(52, 100%, 62%);
   --textColor: hsl(0, 0%, 100%);
   --topColor: hsl(52, 100%, 62%);
+  --equalColor: #000;
 }
 
 *,
@@ -232,6 +235,12 @@ button:hover {
 
 .span-two {
   grid-column: span 2;
+}
+
+#equal {
+  background-color: var(--keybackground2);
+  box-shadow: 0px 4px 1px var(--keyshadow2);
+  color: var(--equalColor);
 }
 
 .del {
