@@ -24,6 +24,7 @@ toggleButton.addEventListener("click", () => {
     screen.style.color = "white";
   }
 });
+
 let hasResult = false;
 function resultListener() {
   const currentNumber = Number(current.dataset.value);
@@ -102,16 +103,20 @@ operatorButtons.forEach((operatorButton) => {
   operatorButton.addEventListener("click", (event) => {
     const operatorValue = event.target.dataset.value;
 
-    if (current.innerText === "") {
+    if (current.innerText === "" && previous.innerText !== "") {
+      operator.textContent = operatorValue;
+      return;
+    } else if (current.innerText === "") {
       return;
     } else {
       resultListener();
     }
+
     operator.textContent = operatorValue;
-    operator.textContent = "";
     previous.innerText = current.innerText;
     previous.dataset.value = previous.innerText.replace(/,/g, "");
     operator.textContent = operatorValue;
     current.innerText = "";
   });
 });
+
